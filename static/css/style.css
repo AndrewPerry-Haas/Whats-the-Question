@@ -135,3 +135,48 @@ h1 {
 @media (max-width: 520px) {
   #game-board { grid-template-columns: 1fr; }
 }
+
+/* Utility to hide elements until mode selected */
+.hidden { display: none !important; }
+
+/* Mode selection screen */
+#mode-selection {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.mode-desc {
+  margin: 0.25rem 0 1rem 0;
+  color: #374151;
+}
+
+.mode-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mode-btn {
+  padding: 1rem 2rem;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.mode-btn:hover { background: #1e40af; transform: translateY(-3px); }
+
+@media (max-width: 520px) {
+  .mode-buttons { flex-direction: column; align-items: stretch; }
+  .mode-btn { width: 100%; }
+}
+
+/* Disabled box visual */
+.word-box.disabled {
+  opacity: 0.6;
+  filter: grayscale(10%);
+}

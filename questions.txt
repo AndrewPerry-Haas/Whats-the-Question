@@ -1,12 +1,12 @@
-What is the capital city of France and its most famous landmark | Paris
-Which planet in our solar system is known as the red planet | Mars
-Who painted the Mona Lisa, the famous Renaissance portrait | Leonardo da Vinci
-What is the chemical symbol for water composed of hydrogen and oxygen | H2O
-Which author wrote the fantasy series beginning with a boy wizard | J. K. Rowling
-In computing, what does CPU stand for in computer architecture | Central Processing Unit
-Which ocean is the largest and deepest on Earth by area | Pacific Ocean
-What is the smallest prime number greater than ten and less than twenty | Eleven
-Which country hosted the 2016 Summer Olympic Games in the city of Rio | Brazil
-Who developed the theory of general relativity about gravity and spacetime | Albert Einstein
-What gas do plants absorb from the atmosphere during photosynthesis | Carbon Dioxide
-Which element has the atomic number one and is the lightest element | Hydrogen
+What is the capital city of France and its most famous landmark? | Paris
+Which planet in our solar system is known as the red planet? | Mars
+Who painted the Mona Lisa, the famous Renaissance portrait? | Leonardo da Vinci
+What is the chemical symbol for water composed of hydrogen and oxygen? | H2O
+Which author wrote the fantasy series beginning with a boy wizard? | J. K. Rowling
+In computing, what does CPU stand for in computer architecture? | Central Processing Unit
+Which ocean is the largest and deepest on Earth by area? | Pacific Ocean
+What is the smallest prime number greater than ten and less than twenty? | Eleven
+Which country hosted the 2016 Summer Olympic Games in the city of Rio? | Brazil
+Who developed the theory of general relativity about gravity and spacetime? | Albert Einstein
+What gas do plants absorb from the atmosphere during photosynthesis? | Carbon Dioxide
+Which element has the atomic number one and is the lightest element? | Hydrogen

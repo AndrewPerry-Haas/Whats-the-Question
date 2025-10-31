@@ -1,3 +1,11 @@
 1. Add the ability for questions that have less than 10 words:
     - when a question has less than ten words hide the unused boxes from (J := number of words in question)
         (J+1):10.
+2. Add logging to the game state and the website.
+    - have a logging warning for questions that are longer than 10 words. Do not select questions that
+        are longer than 10 words
+3. Make the order of the words starting in the left column 1-5 then 6-10 are in the second column. ordering
+    going down.
+4. make the website dark mode.
+5. In free play and challenge mode have a button that exits to the homepage of the game where the game mode can be selected.
+

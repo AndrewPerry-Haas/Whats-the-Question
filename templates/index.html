@@ -10,7 +10,16 @@
   <main id="game-root" class="container">
     <h1>What's The Question</h1>
 
-    <section id="game-board-section">
+    <section id="mode-selection" aria-label="Select game mode">
+      <h2>Select Game Mode</h2>
+      <p class="mode-desc">Choose how you'd like to play.</p>
+      <div class="mode-buttons">
+        <button id="free-play-btn" class="mode-btn">FREE PLAY</button>
+        <button id="challenge-mode-btn" class="mode-btn">CHALLENGE MODE</button>
+      </div>
+    </section>
+
+    <section id="game-board-section" class="hidden">
       <section id="game-board" aria-label="Game board">
         <!-- Ten numbered word boxes (2 columns) -->
         <!-- Each box has data-position 1..10 and a span for number and word -->

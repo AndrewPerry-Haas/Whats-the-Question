@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentQuestion: null, // {id, question, words: []}
     revealed: new Set(), // positions (1-based) revealed
     loaded: false,
+    currentMode: null, // 'free' | 'challenge' | null
   };
 
   const feedbackEl = document.getElementById('feedback');
@@ -19,6 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Gate auto-advance behavior behind a flag for future toggling
   const autoAdvanceEnabled = true;
   const boxes = Array.from(document.querySelectorAll('.word-box'));
+
+  // Mode selection elements
+  const modeSelectionEl = document.getElementById('mode-selection');
+  const gameBoardSection = document.getElementById('game-board-section');
+  const freePlayBtn = document.getElementById('free-play-btn');
+  const challengeModeBtn = document.getElementById('challenge-mode-btn');
 
   // Helper: show feedback
   function showFeedback(message, isSuccess = false) {
@@ -199,6 +206,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Load initial question on page load
-  fetchQuestion();
+  // Mode selection handlers
+  function startFreePlayMode() {
+    state.currentMode = 'free';
+    if (modeSelectionEl) modeSelectionEl.classList.add('hidden');
+    if (gameBoardSection) gameBoardSection.classList.remove('hidden');
+    // start gameplay
+    fetchQuestion();
+  }
+
+  if (freePlayBtn) {
+    freePlayBtn.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      startFreePlayMode();
+    });
+  }
+
+  if (challengeModeBtn) {
+    challengeModeBtn.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      showFeedback('Challenge mode coming soon', false);
+    });
+  }
 });
