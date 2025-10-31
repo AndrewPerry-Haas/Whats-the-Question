@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What's The Question - Trivia Game</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <main id="game-root" class="container">
+    <h1>What's The Question</h1>
+
+    <section id="game-board-section">
+      <section id="game-board" aria-label="Game board">
+        <!-- Ten numbered word boxes (2 columns) -->
+        <!-- Each box has data-position 1..10 and a span for number and word -->
+        {% for i in range(1, 11) %}
+        <div class="word-box" data-position="{{ i }}" tabindex="0" role="button" aria-pressed="false">
+          <div class="box-number">{{ i }}</div>
+          <div class="box-word">???</div>
+        </div>
+        {% endfor %}
+      </section>
+
+      <div id="answer-area">
+        <input id="answer-input" type="text" placeholder="Enter your answer" aria-label="Answer input" />
+        <button id="submit-answer" type="button">SUBMIT ANSWER</button>
+      </div>
+
+      <div id="feedback" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html>

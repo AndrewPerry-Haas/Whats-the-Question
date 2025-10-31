@@ -1,0 +1,54 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv/
+venv/
+env/
+ENV/
+
+# Flask stuff
+instance/
+
+# Pytest
+.pytest_cache/
+
+# Mypy / Pyre / Pylint / Coverage
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+.coverage
+htmlcov/
+
+# VS Code
+.vscode/
+
+# Local tooling
+**/.DS_Store

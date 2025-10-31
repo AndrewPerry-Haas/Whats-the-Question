@@ -1,0 +1,137 @@
+/* Basic reset */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #222;
+  background: #f7f7f8;
+}
+
+/* Layout */
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.75rem;
+}
+
+#start-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+#start-btn:hover {
+  background: #1e40af;
+}
+
+/* Placeholder for game area */
+#game-root {
+  min-height: 300px;
+}
+
+/* Game board layout */
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.word-box {
+  background: #2563eb; /* blue */
+  color: #fff;
+  padding: 1.25rem;
+  border-radius: 8px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  text-transform: uppercase;
+}
+
+.word-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(37,99,235,0.15);
+}
+
+.word-box:focus {
+  outline: 3px solid rgba(99,102,241,0.25);
+}
+
+.word-box.revealed {
+  background: #60a5fa; /* lighter blue */
+  box-shadow: 0 6px 18px rgba(30,64,175,0.12);
+}
+
+.box-number {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.box-word {
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+/* Answer input area */
+#answer-area {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  align-items: center;
+}
+
+#answer-input {
+  flex: 1 1 auto;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+#submit-answer {
+  padding: 0.6rem 1rem;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#submit-answer:hover { background: #1e40af; }
+
+#feedback {
+  margin-top: 0.75rem;
+  min-height: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.feedback.success { color: #047857; }
+.feedback.error { color: #b91c1c; }
+
+/* Responsive: stack to single column on narrow screens */
+@media (max-width: 520px) {
+  #game-board { grid-template-columns: 1fr; }
+}

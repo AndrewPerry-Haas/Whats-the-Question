@@ -1,0 +1,8 @@
+name: wtq
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - flask=3.*
+  - flask-cors=4.*
+  - pip
